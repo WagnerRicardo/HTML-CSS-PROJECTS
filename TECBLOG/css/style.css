@@ -176,6 +176,20 @@ aside .aside-post{
 	padding: 5px;
 	border-bottom: 1px dotted #CCC;
 }
+@media (max-width: 720px){
+	aside .aside-post{
+		font-size: 1em;
+	}
+}
+@media (max-width: 720px){
+	aside li{
+		display: inline-block;
+		font-size: 1em;
+		padding: 0.5em;
+		margin: 0.2em;
+	}
+}
+
 /*footer*/
 footer{
 	background: #CCC;
