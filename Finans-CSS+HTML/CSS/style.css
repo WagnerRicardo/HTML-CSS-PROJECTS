@@ -1,0 +1,86 @@
+/*general layout*/
+*{
+    margin: 0px;
+}
+body {
+    font-family: "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.container {
+    max-width: 930px;
+    padding-right: 1em;
+    padding-left: 1em;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+@media (min-width: 992px){
+    .container {
+    max-width: 960px;
+    }
+}
+@media (max-width: 769px){
+    .container {
+    max-width: 720px;
+    }
+}
+@media (max-width: 578px){
+    .container {
+    max-width: 540px;
+    }
+}
+.btn{
+    border-radius: 0.25em;
+    padding: 6px 12px;
+}
+/*variables*/
+:root{
+    --bgcolor: #ffc107;
+}
+/*header layout*/
+header{
+    background-color: var(--bgcolor);
+    padding: 0.5em;
+}
+.brand img{
+    width: 142px;
+}
+/*Nav layout*/
+.active{
+    opacity: 1;
+}
+nav ul a{
+    color: black;
+    text-decoration: none;
+    opacity: 0.6;
+}
+nav ul{
+    list-style: none;
+}
+nav ul li{
+    display: inline-block;
+    padding: 0 .5em;
+    
+}
+nav ul li a:hover{
+    opacity: 1;
+}
+nav li.btn{
+    border: 1px solid white;
+}
+nav li.btn a{
+    color: white;
+    opacity: 1;
+}
+nav li.btn:hover{
+    background-color: white;
+}
+nav li.btn:hover a{
+    color: #000;
+}
