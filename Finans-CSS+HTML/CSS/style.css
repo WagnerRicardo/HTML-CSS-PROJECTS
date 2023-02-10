@@ -51,6 +51,16 @@ header{
 .brand img{
     width: 142px;
 }
+@media (max-width:769px){
+    .brand img{
+        width: 132px;
+    }
+}
+@media (max-width:578px){
+    .brand img{
+        width: 116px;
+    }
+}
 /*Nav layout*/
 .active{
     opacity: 1;
@@ -83,4 +93,20 @@ nav li.btn:hover{
 }
 nav li.btn:hover a{
     color: #000;
+}
+/*Nav Resposive*/
+.menucheck{
+    color: rgba(0,0,0,.5);
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: .25rem;
+    width: 1.5em;
+    height: 1.25em;
+    line-height: 1.18em;
+    text-align: center;
+    font-size: 1.80em;
+    cursor: pointer;
+    display: none;
+}
+input#menu{
+    display: none;
 }
