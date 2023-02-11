@@ -48,6 +48,20 @@ header{
     background-color: var(--bgcolor);
     padding: 0;
     box-sizing: border-box;
+    color: white;
+}
+header a.btn{
+    border: 1px solid white;
+}
+header a.btn{
+    color: white;
+    opacity: 1;
+}
+header a.btn:hover{
+    background-color: white;
+}
+header a.btn:hover{
+    color: #000;
 }
 .brand img{
     width: 142px;
@@ -87,19 +101,6 @@ nav ul li{
 nav ul li a:hover{
     opacity: 1;
 }
-nav a.btn{
-    border: 1px solid white;
-}
-nav li a.btn{
-    color: white;
-    opacity: 1;
-}
-nav a.btn:hover{
-    background-color: white;
-}
-nav li a.btn:hover{
-    color: #000;
-}
 /*Nav Resposive*/
 .menucheck{
     color: rgba(0,0,0,.5);
@@ -116,7 +117,7 @@ nav li a.btn:hover{
 input#menu{
     display: none;
 }
-@media (max-width:578px){
+@media (max-width:648px){
     .menucheck{
         display: block;
         z-index: 1;
@@ -152,4 +153,76 @@ input#menu{
     #menu:checked ~ ul{
         top: 54px;
     }
+}
+/*Home layout*/
+.home{
+    background-color: var(--bgcolor);
+}
+.home-img img{
+    margin: -5px;
+}
+.home-img{
+    width: 50%;
+    align-items: center;
+}
+.home-text{
+    width: 50%;
+}
+h1.display-header{
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+/*Home forms*/
+header form{
+    margin: 1.5em 0;
+    color: #f8f9fa;
+    width: 100%;
+}
+header .input-group{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border-radius: .3em;
+    line-height: 2em;
+}
+header .input-group .form-control{
+    height: calc(1.25em + 2px);
+    width: 62%;
+    padding: .5em 1em;
+    font-size: 1.25em;
+    line-height: 1.5;
+    border-radius: .3em;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    display: block;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    overflow: visible;
+    z-index: 1;
+}
+header .input-group .input-group-append{
+    display: flex;
+    border: none;
+}
+header .input-group .input-group-append:hover button.btn{
+    background-color: #005bbd;
+}
+header .input-group .input-group-append button.btn{
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    overflow: visible;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
 }
