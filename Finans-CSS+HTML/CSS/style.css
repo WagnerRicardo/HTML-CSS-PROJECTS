@@ -11,8 +11,9 @@ body {
 }
 .container {
     max-width: 930px;
-    padding-right: 1.75em;
-    padding-left: 1.75em;
+    padding-top: .3em;
+    padding-right: calc(2em + 8px);
+    padding-left: calc(2em + 8px);
     margin-right: auto;
     margin-left: auto;
     display: flex;
@@ -20,17 +21,17 @@ body {
     align-items: center;
     justify-content: space-between;
 }
-@media (min-width: 992px){
+@media (min-width: 960px){
     .container {
     max-width: 960px;
     }
 }
-@media (max-width: 769px){
+@media (max-width: 860px){
     .container {
     max-width: 720px;
     }
 }
-@media (max-width: 578px){
+@media (max-width: 760px){
     .container {
     max-width: 540px;
     }
@@ -50,6 +51,9 @@ header{
     box-sizing: border-box;
     color: white;
 }
+header a{
+    text-decoration: none;
+}
 header a.btn{
     border: 1px solid white;
 }
@@ -63,15 +67,21 @@ header a.btn:hover{
 header a.btn:hover{
     color: #000;
 }
+@media (max-width: 760px){
+    header{
+        padding-bottom: 1em;
+    }
+}
+/*logo*/
 .brand img{
     width: 142px;
 }
-@media (max-width:769px){
+@media (max-width:860px){
     .brand img{
         width: 132px;
     }
 }
-@media (max-width:578px){
+@media (max-width:760px){
     .brand img{
         width: 116px;
         z-index: 1;
@@ -79,8 +89,9 @@ header a.btn:hover{
 }
 /*Nav layout*/
 nav{
-    padding: 0.5em 1em;
+    padding: 0.5em 0;
     background-color: transparent;
+    
 }
 .active{
     opacity: 1;
@@ -117,7 +128,7 @@ nav ul li a:hover{
 input#menu{
     display: none;
 }
-@media (max-width:648px){
+@media (max-width:760px){
     .menucheck{
         display: block;
         z-index: 1;
@@ -166,8 +177,19 @@ input#menu{
     align-items: center;
 }
 .home-text{
-    width: 50%;
+    width: 100%;
 }
+.home-text a.btn {
+    margin-left: 4px;
+}
+/*Fixing icon spacing*/
+.btn-fix{
+    padding: .5em .5em;
+}
+.icon-fix{
+    padding-left: .25em;
+}  
+/*-*/
 h1.display-header{
     font-size: 3.5rem;
     font-weight: 300;
@@ -189,14 +211,15 @@ header .input-group{
 }
 header .input-group .form-control{
     height: calc(1.25em + 2px);
-    width: 62%;
+    flex: 1 1 auto;
+    width: 1%;
     padding: .5em 1em;
     font-size: 1.25em;
     line-height: 1.5;
     border-radius: .3em;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    display: block;
+    display: inline-block;
     color: #495057;
     background-color: #fff;
     background-clip: padding-box;
@@ -207,6 +230,8 @@ header .input-group .form-control{
 header .input-group .input-group-append{
     display: flex;
     border: none;
+    width: 8.6em;
+    z-index: 2;
 }
 header .input-group .input-group-append:hover button.btn{
     background-color: #005bbd;
@@ -225,4 +250,50 @@ header .input-group .input-group-append button.btn{
     color: #fff;
     background-color: #007bff;
     border: none;
+}
+/*Header content Responsive*/
+@media (min-width: 960px){
+    .text-container{
+        width: 50%;
+    }
+    .home-img{
+        width: 50%;
+    }
+    /*Fixing icon spacing*/
+    .btn-fix{
+        padding: .35em .5em;
+    }
+    .icon-fix{
+        padding-left: .15em;
+    } 
+}
+@media (max-width: 860px){
+    .text-container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .home-img{
+        text-align: center;
+        width: 100%;
+    }
+    /*Fixing icon spacing*/
+    .btn-fix{
+        padding: .37em .5em;
+    }
+    .icon-fix{
+        padding-left: .15em;
+    } 
+}
+@media (max-width: 760px){
+    .home-img{
+        display: none;
+    }
+    /*Fixing icon spacing*/
+    .btn-fix{
+        padding: .39em .5em;
+    }
+    .icon-fix{
+        padding-left: .15em;
+    } 
 }
