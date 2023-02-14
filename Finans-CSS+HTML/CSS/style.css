@@ -9,6 +9,23 @@ body {
     font-weight: 400;
     line-height: 1.5;
 }
+ul{
+    list-style: none;
+}
+ul li{
+    display: inline-block;
+    padding: 0 .5em;
+}
+h2,h4,h5{
+    margin-bottom: .5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+}
+h5{
+    font-size: 1.25em;
+}
 a{
     text-decoration: none;
 }
@@ -29,7 +46,7 @@ a{
     max-width: 960px;
     }
 }
-@media (max-width: 860px){
+@media (max-width: 959px){
     .container {
     max-width: 720px;
     padding-right: calc(1.5em + 8px);
@@ -53,6 +70,15 @@ a{
 }
 .btn:hover{
     background-color: #005bbd;
+}
+a.btn{
+    padding: 10px 12px;
+}
+.row{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-items: center;
+    width: 100%;
 }
 /*variables*/
 :root{
@@ -111,14 +137,6 @@ nav ul a{
     color: black;
     text-decoration: none;
     opacity: 0.6;
-}
-nav ul{
-    list-style: none;
-}
-nav ul li{
-    display: inline-block;
-    padding: 0 .5em;
-    
 }
 nav ul li a:hover{
     opacity: 1;
@@ -281,9 +299,9 @@ header .input-group .input-group-append button.btn{
     }
     .icon-fix{
         padding-left: .15em;
-    } 
+    }
 }
-@media (max-width: 860px){
+@media (max-width: 959px){
     .text-container{
         width: 100%;
         display: flex;
@@ -320,21 +338,59 @@ main h2 {
 main h4{
     font-size: 1.5em;
 }
+main p{
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
 main section{
     display: flex;
-    margin-right: -15px;
-    margin-left: -15px;
     padding: 60px 0px;
     border-bottom: 1px solid #e5e5e5;
+    align-items: center;
 }
-div.img-text{
+div.img-section{
     padding: 0 1em;
 }
 main section img{
     max-width: 100%;
-    height: auto;
+    align-self: center;
+    margin: 0 auto;
 }
 div.img-section{
     padding: 0 1em;
     box-sizing: border-box;
+    display: flex;
+    width: 50%;
+}
+div.text-section{
+    width: 50%;
+}
+/*Info row section*/
+section.info-row div.info-box div.img-section,section.info-row div.info-box div.text-section{
+    width: 100%;
+}
+.info-box{
+    padding: 0 1em;
+}
+/*footer*/
+footer{
+    padding: 1em 0;
+    margin: 1em 0;
+    align-items: center;
+}
+footer a{
+    color: #007bff;
+}
+footer a:hover{
+    color: #005bbd;
+    text-decoration: underline;
+}
+footer li{
+    padding: 1em;
+}
+footer ul{
+    padding-left: 0;
+}
+footer div.credits-section{
+    justify-self: flex-end;
 }
