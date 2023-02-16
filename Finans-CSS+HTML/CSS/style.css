@@ -76,7 +76,7 @@ a.btn{
 }
 .row{
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto;
     align-items: center;
     width: 100%;
 }
@@ -365,6 +365,15 @@ div.img-section{
 div.text-section{
     width: 50%;
 }
+/*Main Content General layout RESPONSIVE*/
+@media (max-width: 760px){
+    section{
+        flex-direction: column;
+    }
+    div.img-section{
+        margin: 1em 0;
+    }
+}
 /*Info row section*/
 section.info-row div.info-box div.img-section,section.info-row div.info-box div.text-section{
     width: 100%;
@@ -393,4 +402,5 @@ footer ul{
 }
 footer div.credits-section{
     justify-self: flex-end;
+    
 }
